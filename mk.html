@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Детска Продавница</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="fade-in">
+    <h1>Детска Продавница</h1>
+    <nav>
+      <a href="index.html"><img src="Amerika e madhe.jpeg" alt="Usa Flag" width="50" height="25"></a> |
+      <a href="sq.html"><img src="Shipnija e madhe.jpeg" alt="Albanian Flag"  width="50" height="25"></a> |
+      <a href="mk.html"><img src="Maqedonia e vogel.jpeg" alt="Macedonian Flag" width="50" height="25"></a>
+    </nav>
+  </header>
+
+  <section class="hero slide-up">
+    <h2>Сè што му треба на вашето бебе</h2>
+    <a href="#products" class="btn">Купи сега</a>
+  </section>
+
+  <section id="products" class="products fade-in">
+    <h2>Најпродавани</h2>
+    <div class="product-grid" id="product-grid"></div>
+  </section>
+
+  <section id="cart" class="fade-in">
+    <h2>Вашата Кошничка</h2>
+    <div id="cart-items"></div>
+    <button class="btn" onclick="toggleOrderForm()">Нарачај</button>
+
+    <form id="order-form" action="https://formspree.io/f/xrblzzdq" method="POST" style="display:none">
+      <input name="name" placeholder="Вашето име" required>
+      <input name="phone" placeholder="Телефонски број" required>
+      <textarea name="address" placeholder="Вашата адреса" required></textarea>
+      <textarea name="order" id="order-summary" readonly></textarea>
+      <button type="submit" class="btn">Испрати Нарачка</button>
+    </form>
+  </section>
+
+  <footer class="fade-in">
+    <p>© 2025 Детска Продавница - Сите права се задржани</p>
+  </footer>
+</body>
+</html>

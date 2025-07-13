@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dyqan për Fëmijë</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="fade-in">
+    <h1>Dyqan për Fëmijë</h1>
+    <nav>
+      <a href="index.html"><img src="Amerika e madhe.jpeg" alt="" width="50" height="25"></a> |
+      <a href="sq.html"><img src="Shipnija e madhe.jpeg" alt="" width="50" height="25"></a> |
+      <a href="mk.html"><img src="Maqedonia e vogel.jpeg" alt="" width="50" height="25"></a>
+    </nav>
+  </header>
+
+  <section class="hero slide-up">
+    <h2>Çdo gjë për foshnjën tuaj</h2>
+    <a href="#products" class="btn">Bli Tani</a>
+  </section>
+
+  <section id="products" class="products fade-in">
+    <h2>Më të shiturat</h2>
+    <div class="product-grid" id="product-grid"></div>
+  </section>
+
+  <section id="cart" class="fade-in">
+    <h2>Shporta Juaj</h2>
+    <div id="cart-items"></div>
+    <button class="btn" onclick="toggleOrderForm()">Porosisni</button>
+
+    <form id="order-form" action="https://formspree.io/f/xrblzzdq" method="POST" style="display:none">
+      <input name="name" placeholder="Emri juaj" required>
+      <input name="phone" placeholder="Numri i telefonit" required>
+      <textarea name="address" placeholder="Adresa juaj" required></textarea>
+      <textarea name="order" id="order-summary" readonly></textarea>
+      <button type="submit" class="btn">Dërgo Porosinë</button>
+    </form>
+  </section>
+
+  <footer class="fade-in">
+    <p>© 2025 Dyqan për Fëmijë - Të gjitha të drejtat e rezervuara</p>
+  </footer>
+</body>
+</html>
